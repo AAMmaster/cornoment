@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+section.clock {
+    width: 800px;
+    height: 700px;
+    position: absolute;
+    left: calc(50% - 400px);
+    top: calc(50vh - 400px);
+    display: flex;
+    flex-flow: column;
+}
+
+section.clock>img {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: calc(50% - 25%);
+    top: calc(50% - 25%);
+
+
+}
+
+section.clock>div.hour{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    align-items: center;
+    text-align: center;
+    line-height: 60px;
+    left: calc(50% - 110px);
+
+
+}
+
+
+section.clock>div.min>h1>span.leftspan{
+    display: inline-block;
+    position: inherit;
+    
+}
+
+section.clock>div.min{
+    position: absolute;
+    width: 64px;
+    height: 60px;
+    top: calc(50% - 30px);
+    align-items: center;
+    text-align: center;
+    line-height: 60px;
+    left: calc(50% - 40px);
+
+
+}
+
+section.clock>div.sec{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    align-items: center;
+    text-align: center;
+    line-height: 60px;
+    left: calc(50% + 30px);
+
+
+}
