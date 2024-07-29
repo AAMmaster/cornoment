@@ -18,6 +18,12 @@ setInterval(() => {
     h1min.innerText = date.getMinutes();
     h1sec.innerText = date.getSeconds();
 
-} ,1000)
+}, 1000)
+
+
+let cornoment = document.getElementById("")
+cornoment.addEventListener("click", () => {
+    
+})
 
 
