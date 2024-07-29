@@ -15,14 +15,34 @@ section.clock {
     flex-flow: column;
 }
 
-section.clock>img {
+section.clock>img#watch {
     position: absolute;
     width: 50%;
     height: 50%;
     left: calc(50% - 25%);
     top: calc(50% - 25%);
+    z-index: 1;
 
 
+}
+section.clock>div.button{
+    position: absolute;
+    width: 100px;
+    height: 16%;
+    left: calc(50% + 8%);
+    top: calc(50% - 12%);
+    z-index: 2;
+}
+section.clock>div.button>img#button {
+    width: 100%;
+    height: 100%;
+    
+
+
+}
+
+section.clock>img#button:hover{
+    left: calc(50% + 5%);
 }
 
 section.clock>div.hour{
@@ -34,6 +54,7 @@ section.clock>div.hour{
     text-align: center;
     line-height: 60px;
     left: calc(50% - 110px);
+    z-index: 1;
 
 
 }
@@ -54,6 +75,7 @@ section.clock>div.min{
     text-align: center;
     line-height: 60px;
     left: calc(50% - 40px);
+    z-index: 1;
 
 
 }
@@ -67,6 +89,7 @@ section.clock>div.sec{
     text-align: center;
     line-height: 60px;
     left: calc(50% + 30px);
+    z-index: 1;
 
 
 }
