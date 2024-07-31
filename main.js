@@ -21,9 +21,15 @@ setInterval(() => {
 }, 500)
 
 
-let cornoment = document.getElementById("")
+let cornoment = document.getElementById("button")
 cornoment.addEventListener("click", () => {
-    
+    cornoment.style.zIndex = ("-1")
+    cornoment.style.left = ("calc(50% + 8%)")
+
+    setTimeout(() => {
+        cornoment.style.zIndex = ("2")
+        cornoment.style.left = ("calc(50% + 8.5%)")
+    }, 100);
 })
 
 

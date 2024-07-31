@@ -23,29 +23,31 @@ section.clock>img#watch {
     top: calc(50% - 25%);
     z-index: 1;
 
-
 }
-section.clock>div.button{
+
+/* }
+section.clock{
     position: absolute;
-    width: 100px;
+    width: 150px;
     height: 16%;
-    left: calc(50% + 8%);
+    left: calc(50% + 8.5%);
     top: calc(50% - 12%);
     z-index: 2;
-}
-section.clock>div.button>img#button {
-    width: 100%;
-    height: 100%;
-    
+} */
+
+section.clock>img#button {
+    position: absolute;
+    width: 150px;
+    height: 16%;
+    left: calc(50% + 8.5%);
+    top: calc(50% - 12%);
+    z-index: 2;
 
 
 }
 
-section.clock>img#button:hover{
-    left: calc(50% + 5%);
-}
 
-section.clock>div.hour{
+section.clock>div.hour {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -60,13 +62,13 @@ section.clock>div.hour{
 }
 
 
-section.clock>div.min>h1>span.leftspan{
+section.clock>div.min>h1>span.leftspan {
     display: inline-block;
     position: inherit;
-    
+
 }
 
-section.clock>div.min{
+section.clock>div.min {
     position: absolute;
     width: 64px;
     height: 60px;
@@ -80,7 +82,7 @@ section.clock>div.min{
 
 }
 
-section.clock>div.sec{
+section.clock>div.sec {
     position: absolute;
     width: 60px;
     height: 60px;
