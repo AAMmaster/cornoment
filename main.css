@@ -48,6 +48,7 @@ section.clock>img#button {
 
 
 section.clock>div.hour {
+    
     position: absolute;
     width: 60px;
     height: 60px;
@@ -55,7 +56,7 @@ section.clock>div.hour {
     align-items: center;
     text-align: center;
     line-height: 60px;
-    left: calc(50% - 110px);
+    left: calc(50% - 100px);
     z-index: 1;
 
 
@@ -70,13 +71,13 @@ section.clock>div.min>h1>span.leftspan {
 
 section.clock>div.min {
     position: absolute;
-    width: 64px;
+    width: 110px;
     height: 60px;
     top: calc(50% - 30px);
     align-items: center;
     text-align: center;
     line-height: 60px;
-    left: calc(50% - 40px);
+    left: calc(50% - 50px);
     z-index: 1;
 
 
@@ -90,7 +91,7 @@ section.clock>div.sec {
     align-items: center;
     text-align: center;
     line-height: 60px;
-    left: calc(50% + 30px);
+    left: calc(50% + 40px);
     z-index: 1;
 
 
