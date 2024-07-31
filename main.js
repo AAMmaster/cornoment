@@ -18,7 +18,7 @@ setInterval(() => {
     h1min.innerText = date.getMinutes();
     h1sec.innerText = date.getSeconds();
 
-}, 1000)
+}, 500)
 
 
 let cornoment = document.getElementById("")
