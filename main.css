@@ -49,6 +49,67 @@ section.clock>img#button {
 }
 
 
+section.clock>div.upda>div.up{
+    width: fit-content;
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    
+    left: calc(50% - 90px);
+    top: calc(50% - 85px);
+    z-index: 3;
+    gap: 15px;
+    
+}
+section.clock>div.upda>div.up>div.houp>img{
+    width: 50px;
+
+    height: 50px;
+}
+
+section.clock>div.upda>div.up>div.minup>img{
+    width: 50px;
+
+    height: 50px;
+}
+
+section.clock>div.upda>div.up>div.secup>img{
+    width: 50px;
+
+    height: 50px;
+}
+
+section.clock>div.upda>div.dawn{
+    width: fit-content;
+    display:flex;
+    transform: rotate(180deg);
+    flex-flow: row;
+    position: absolute;
+    
+    left: calc(50% - 90px);
+    top: calc(50% + 25px);
+    z-index: 3;
+    gap: 15px;
+
+}
+
+section.clock>div.upda>div.dawn>div.hodawn>img{
+    width: 50px;
+
+    height: 50px;
+}
+
+section.clock>div.upda>div.dawn>div.mindawn>img{
+    width: 50px;
+
+    height: 50px;
+}
+
+section.clock>div.upda>div.dawn>div.secdawn>img{
+    width: 50px;
+
+    height: 50px;
+}
 section.clock>div.hour {
     
     position: absolute;
