@@ -68,22 +68,30 @@ let alarmso = 0
 
 
 
-let counter = 0
+let counter = 4
+console.log(counter)
 
 
 cornoment.addEventListener("click", () => {
-    counter++
-    if (  1 <= counter % 2 == 0) {
 
-        alarm = setInterval(alertresulat(), 1000);
-        console.log(alarm);
+
+
+
+    if (counter % 2 == 0) {
+
+        alertresulat()
+
+
+    } else {
+
+        console.log("wared if nashod");
 
 
     }
 
+    counter = counter + 1
+    console.log(counter);
 
-    // alarm = setInterval(alertresulat(), 1000);
-    // console.log(alarm);
 
 
 
@@ -119,7 +127,7 @@ cornoment.addEventListener("click", () => {
     h1hour.innerText = "00";
     h1min.innerHTML = "00";
     h1sec.innerText = "00";
-
+    clearInterval(alarm)
     clearInterval(intelval)
     CloseEvent
 
@@ -131,6 +139,7 @@ cornoment.addEventListener("click", () => {
 
 
     }, 30);
+
 
 })
 
