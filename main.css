@@ -63,27 +63,41 @@ section.clock>div.upda>div.up{
 }
 section.clock>div.upda>div.up>div.houp>img{
     width: 50px;
-
     height: 50px;
+}
+
+section.clock>div.upda>div.up>div.houp{
+    opacity: 0;
+    z-index:-2;
 }
 
 section.clock>div.upda>div.up>div.minup>img{
     width: 50px;
-
+    
     height: 50px;
+}
+
+section.clock>div.upda>div.up>div.minup{
+    opacity: 0;
+    z-index:-2;
 }
 
 section.clock>div.upda>div.up>div.secup>img{
     width: 50px;
-
+    
     height: 50px;
+}
+
+section.clock>div.upda>div.up>div.secup{
+    opacity: 0;
+    z-index:-2;
 }
 
 section.clock>div.upda>div.dawn{
     width: fit-content;
     display:flex;
     transform: rotate(180deg);
-    flex-flow: row;
+    flex-flow: row-reverse;
     position: absolute;
     
     left: calc(50% - 90px);
@@ -95,8 +109,12 @@ section.clock>div.upda>div.dawn{
 
 section.clock>div.upda>div.dawn>div.hodawn>img{
     width: 50px;
-
+    
     height: 50px;
+}
+section.clock>div.upda>div.dawn>div.hodawn{
+    opacity: 0;
+    z-index:-2;
 }
 
 section.clock>div.upda>div.dawn>div.mindawn>img{
@@ -105,11 +123,23 @@ section.clock>div.upda>div.dawn>div.mindawn>img{
     height: 50px;
 }
 
+section.clock>div.upda>div.dawn>div.mindawn{
+    opacity: 0;
+    z-index:-2;
+}
+
 section.clock>div.upda>div.dawn>div.secdawn>img{
     width: 50px;
-
+    
     height: 50px;
 }
+
+section.clock>div.upda>div.dawn>div.secdawn{
+    opacity: 0;
+    z-index:-2;
+}
+
+
 section.clock>div.hour {
     
     position: absolute;
