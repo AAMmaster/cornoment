@@ -12,8 +12,8 @@ let secdawn = document.getElementById("secdawn")
 let alarmdiv =document.getElementById("alarm")
 
 let newaudio = document.createElement("audio")
-newaudio.innerHTML = ""
-
+newaudio.attributes.src = "./Rocksummer (45 sec).mp3";
+newaudio.attributes.autoplay = true
 
 
 
@@ -78,9 +78,6 @@ console.log(counter)
 
 cornoment.addEventListener("click", () => {
 
-
-
-
     if (counter % 2 == 0) {
 
 
@@ -98,13 +95,8 @@ cornoment.addEventListener("click", () => {
     }
 
     
-
     counter = counter + 1
     console.log(counter);
-
-
-
-
 
 
     houp.style.opacity = ("1")
@@ -153,20 +145,8 @@ cornoment.addEventListener("click", () => {
 
 
 })
-
-
-
-
-
 cornoment.addEventListener("dblclick", () => {
-
-
-    
     console.log(alarm);
-
-
-
-
 
     houp.style.opacity = ("0")
     hodawn.style.opacity = ("0")
@@ -207,7 +187,7 @@ cornoment.addEventListener("dblclick", () => {
             // document.write(`<h1>ali bidar sho suat ${h1hour.innerText}:${h1min.innerText}:${h1sec.innerText}</h1>`)
 
             alarmdiv.innerText = `ali bidar sho suat${h1hour.innerText}:${h1min.innerText}:${h1sec.innerText}`
-            
+            alarmdiv.appendChild(newaudio)
             setTimeout(() => {
                 clearInterval(alarmso)
                 alarmdiv.innerText = ""
@@ -223,4 +203,3 @@ cornoment.addEventListener("dblclick", () => {
     
 
 },)
-
