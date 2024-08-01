@@ -18,64 +18,73 @@ let intelval = setInterval(() => {
 
 
     const date = new Date();
-    h1hour.innerText = date.getHours();
-    h1min.innerHTML = `<span class="leftspan">:</span>${date.getMinutes()}<span class="rightspan">:</span>`;
-    h1sec.innerText = date.getSeconds();
+    h1hour.innerText = String(date.getHours());
+    h1min.innerHTML = String(date.getMinutes());
+    h1sec.innerText = String(date.getSeconds());
 
 
 }, 500)
 
-
+let result = ""
 function alertresulat() {
-
-
-
-    minnumber = 1
 
     houp.addEventListener("click", () => {
         h1hour.innerText++
         h1hour = document.getElementById("h1hour")
-        console.log((h1hour.innerText));
+
     })
     hodawn.addEventListener("click", () => {
         h1hour.innerText--
         h1hour = document.getElementById("h1hour")
-        console.log(h1hour.innerText);
+
     })
     minup.addEventListener("click", () => {
-        h1min.innerHTML = `<span class="leftspan">:</span>${minnumber++}<span class="rightspan">:</span>`
+        h1min.innerText++
         h1min = document.getElementById("h1min")
-        console.log(minnumber);
+
     })
     mindawn.addEventListener("click", () => {
-        h1min.innerHTML = `<span class="leftspan">:</span>${minnumber--}<span class="rightspan">:</span>`
+        h1min.innerText--
         h1min = document.getElementById("h1min")
-        console.log(minnumber);
+
     })
     secup.addEventListener("click", () => {
         h1sec.innerText++
         h1sec = document.getElementById("h1sec")
-        console.log(h1sec.innerText);
+
     })
     secdawn.addEventListener("click", () => {
         h1sec.innerText--
         h1sec = document.getElementById("h1sec")
-        console.log(h1sec.innerText);
+
     })
 
-    return `${h1hour.innerText}${minnumber}${h1sec.innerText}`
+    result = [h1hour.innerText, h1min.innerText, h1sec.innerText]
+    console.log(result);
 }
 
-let alarm = setInterval(alertresulat(), 500);
+let alarm = 0
+let alarmso = 0
 
+
+
+let counter = 0
 
 
 cornoment.addEventListener("click", () => {
+    counter++
+    if (  1 <= counter % 2 == 0) {
 
-    
+        alarm = setInterval(alertresulat(), 1000);
+        console.log(alarm);
 
 
-    
+    }
+
+
+    // alarm = setInterval(alertresulat(), 1000);
+    // console.log(alarm);
+
 
 
 
@@ -108,17 +117,20 @@ cornoment.addEventListener("click", () => {
 
 
     h1hour.innerText = "00";
-    h1min.innerHTML = `<span class="leftspan">:</span>${"00"}<span class="rightspan">:</span>`;
+    h1min.innerHTML = "00";
     h1sec.innerText = "00";
 
     clearInterval(intelval)
+    CloseEvent
 
     setTimeout(() => {
+
+
         cornoment.style.zIndex = ("2")
         cornoment.style.left = ("calc(50% + 8.5%)")
 
 
-    }, 40);
+    }, 30);
 
 })
 
@@ -128,7 +140,22 @@ cornoment.addEventListener("click", () => {
 
 cornoment.addEventListener("dblclick", () => {
 
-    
+
+    alarmso = setInterval(() => {
+
+        if (result == h1hour.innerText && h1min.innerText && h1sec.innerText) {
+            console.log("alrm zadd")
+        } else {
+            console.log("alarm nazad")
+            clearInterval(alarm)
+        }
+
+
+    }, 500);
+
+
+
+
 
     houp.style.opacity = ("0")
     hodawn.style.opacity = ("0")
