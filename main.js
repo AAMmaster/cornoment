@@ -9,7 +9,10 @@ let minup = document.getElementById("minup")
 let mindawn = document.getElementById("mindawn")
 let secup = document.getElementById("secup")
 let secdawn = document.getElementById("secdawn")
+let alarmdiv =document.getElementById("alarm")
 
+let newaudio = document.createElement("audio")
+newaudio.innerHTML = ""
 
 
 
@@ -59,11 +62,12 @@ function alertresulat() {
 
     })
 
-    result = [h1hour.innerText, h1min.innerText, h1sec.innerText]
-    console.log(result);
+    
+    return result = [Number(h1hour.innerText), Number(h1min.innerText), Number(h1sec.innerText)]
+    
 }
 
-let alarm = 0
+let alarm =0
 let alarmso = 0
 
 
@@ -79,7 +83,11 @@ cornoment.addEventListener("click", () => {
 
     if (counter % 2 == 0) {
 
-        alertresulat()
+
+        alarm = 0
+        alarm = alertresulat()
+        console.log(alarm);
+        
 
 
     } else {
@@ -88,6 +96,8 @@ cornoment.addEventListener("click", () => {
 
 
     }
+
+    
 
     counter = counter + 1
     console.log(counter);
@@ -127,9 +137,10 @@ cornoment.addEventListener("click", () => {
     h1hour.innerText = "00";
     h1min.innerHTML = "00";
     h1sec.innerText = "00";
-    clearInterval(alarm)
+    
     clearInterval(intelval)
-    CloseEvent
+    clearInterval(alarmso)
+    
 
     setTimeout(() => {
 
@@ -150,17 +161,8 @@ cornoment.addEventListener("click", () => {
 cornoment.addEventListener("dblclick", () => {
 
 
-    alarmso = setInterval(() => {
-
-        if (result == h1hour.innerText && h1min.innerText && h1sec.innerText) {
-            console.log("alrm zadd")
-        } else {
-            console.log("alarm nazad")
-            clearInterval(alarm)
-        }
-
-
-    }, 500);
+    
+    console.log(alarm);
 
 
 
@@ -192,13 +194,33 @@ cornoment.addEventListener("dblclick", () => {
 
         const date = new Date();
         h1hour.innerText = date.getHours();
-        h1min.innerHTML = `<span class="leftspan">:</span>${date.getMinutes()}<span class="rightspan">:</span>`;
+        h1min.innerHTML = date.getMinutes();
         h1sec.innerText = date.getSeconds();
 
     }, 500);
 
+    
+    alarmso = setInterval(() => {
 
-    clearInterval(alarm)
+        if (alarm[0]  == h1hour.innerText && alarm[1]  == h1min.innerText && alarm[2]  == h1sec.innerText) {
+            console.log("alrm zadd")
+            // document.write(`<h1>ali bidar sho suat ${h1hour.innerText}:${h1min.innerText}:${h1sec.innerText}</h1>`)
+
+            alarmdiv.innerText = `ali bidar sho suat${h1hour.innerText}:${h1min.innerText}:${h1sec.innerText}`
+            
+            setTimeout(() => {
+                clearInterval(alarmso)
+                alarmdiv.innerText = ""
+            }, 5000);
+        } else {
+            console.log("alarm nazad");
+        }
+
+
+    }, 450);
+
+
+    
 
 },)
 
